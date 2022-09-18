@@ -7,7 +7,9 @@ route.get('/getProduct',getProduct);
 route.get('/getProduct/:name',getProductByName);
 route.patch('/update',updateProduct);
 route.delete('/delete',deleteProduct);
-
+route.get('*',(req,res)=>{
+    res.send('Hi this is my Mongodb CRUD');
+})
 
 module.exports={
     product:route
